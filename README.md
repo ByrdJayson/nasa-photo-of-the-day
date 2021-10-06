@@ -4,7 +4,7 @@ This will be a two-module project. In it you will consume the NASA API to fetch 
 
 ## Instructions
 
---- 
+---
 
 Read these instructions carefully. Understand exactly what is expected before starting this project.
 
@@ -43,7 +43,6 @@ This project was put together using create-react-app (CRA). You will not need to
 - [ ] Once you have a design plan in mind, break down the designs into individual components.
 - [ ] Plan which components will hold state, what data each needs from props (if any), and where you will be making your data fetch.
 - [ ] Now it's time to jump into the code!
-
 **File structure**
 
 - [ ] Take a look at your planned components. Create the folders and files you need for each component.

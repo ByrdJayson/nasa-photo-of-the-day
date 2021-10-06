@@ -7,13 +7,22 @@ export default function Content(){
  const API_CONNETOR = '?api_key=';
 
 
- 
- const [ data, setData] = useState('')
+
+ const [ image, setImage] = useState(null);
+ const [ title, setTitle] = useState(null);
+ const [ copyright, setCopyright] = useState(null);
+ const [ date, setDate] = useState(null);
+ const [ explanation, setExplanation] = useState(null);
  useEffect(() => {
   const api_link = `${BASE_URL}${API_CONNETOR}${API_KEY}`;
   axios.get(`${api_link}`)
   .then(res => {
-   setData(res);
+   setImage(res.data.url);
+   setTitle(res.data.title);
+   setDate(res.data.date);
+   setCopyright(res.data.copyright);
+   setExplanation(res.data.explanation);
+
    console.log(res);
 
  }).catch(err =>{
@@ -21,6 +30,19 @@ export default function Content(){
  })
 }, [] );
   return (
-    <div></div>
+    <div>
+      <div>
+        <img src={image} alt={title}/>
+      </div>
+
+      <div>
+        <h1>{title}</h1>
+        <p></p>
+        <h2>{copyright}</h2>
+        <h2>{date}</h2>
+        <p>{explanation}</p>
+      </div>
+    </div>
   );
 }
+ 
