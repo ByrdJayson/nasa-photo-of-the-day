@@ -5,7 +5,8 @@ import styled from 'styled-components';
 export default function Content(){
 
 const StyledImage = styled.img`
-  width: 65%;
+  width: 80%;
+  height: 50vh;
   margin:3rem;
   border: 5px solid black;
 
@@ -13,7 +14,7 @@ const StyledImage = styled.img`
 
 const StyledDiv = styled.div`
   font-family: 'Poppins', sans-serif;
-  background-color: silver;
+  background-color: #e2dccd;
 
 `
 
@@ -25,6 +26,7 @@ color: black;
 
 const StyledContentDiv = styled.div`
 padding: 2rem;
+font-size: 1.5rem;
 
 
 
@@ -71,7 +73,7 @@ padding: 2rem;
         <h2>{copyright}</h2>
         <h2>{date}</h2>
         </div>
-        <StyledMainP>{explanation}</StyledMainP>
+      <StyledMainP>{explanation}</StyledMainP>
       </StyledContentDiv>
     </StyledDiv>
   );
