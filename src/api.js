@@ -5,31 +5,30 @@ import styled from 'styled-components';
 export default function Content(){
 
 const StyledImage = styled.img`
-  width: 55%;
+  width: 65%;
   margin:3rem;
   border: 5px solid black;
 
 `
 
-const StyledImgDiv = styled.div`
+const StyledDiv = styled.div`
   font-family: 'Poppins', sans-serif;
   background-color: silver;
 
 `
 
 const StyledMainP = styled.p`
+color: black;
+
+`
+
+const StyledContentDiv = styled.div`
+padding: 2rem;
+
 
 
 
 `
-
-const StyledContentContainer = styled.div`
-display: flex;
-justify-content: center;
-width: 80%
-
-`
-
 
 
  const BASE_URL = 'https://api.nasa.gov/planetary/apod';
@@ -60,19 +59,19 @@ width: 80%
  })
 }, [] );
   return (
-    <StyledImgDiv class='img-container'>
+    <StyledDiv class='img-container'>
       <div>
         <StyledImage src={image} alt={title}/>
       </div>
 
-      <div class='content-container'>
+      <StyledContentDiv class='content-container'>
         <h1>{title}</h1>
         <div>
         <h2>{copyright}</h2>
         <h2>{date}</h2>
         </div>
-        <StyledContentContainer><StyledMainP>{explanation}</StyledMainP></StyledContentContainer>
-      </div>
-    </StyledImgDiv>
+        <StyledMainP>{explanation}</StyledMainP>
+      </StyledContentDiv>
+    </StyledDiv>
   );
 }
