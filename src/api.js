@@ -20,6 +20,7 @@ const StyledDiv = styled.div`
 const StyledMainP = styled.p`
 color: black;
 
+
 `
 
 const StyledContentDiv = styled.div`
