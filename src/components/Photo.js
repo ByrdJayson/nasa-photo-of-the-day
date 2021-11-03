@@ -1,19 +1,24 @@
-import React from 'react'
-
+import React from 'react';
+import Details from '../components/Details';
 
 
 export default function Photo(props){
 
-    const { url } = props;
+    const { url } = props.data;
+    const { data } = props;
     console.log(url);
 
 
     return (
-      <div className='img-container'>
+      <>
+        <div className='img-container'>
 
         <img src={url} alt='Nasa pic of the day' id='main-img' key={url}/>
- 
-      </div>
+
+        </div>
+
+        <Details data={data}/>
+      </>
 
     )
 

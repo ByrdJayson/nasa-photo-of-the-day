@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <Photo url={data.url}/>
+      <Photo data={data}/>
     </div>
   );
 }
