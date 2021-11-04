@@ -3,19 +3,11 @@ import "./App.css";
 import axios from 'axios';
 import { BASE_URL, API_KEY, API_CONNECTOR } from './constants/index'
 import Photo from './components/Photo';
-
-
-
-
-
-
-
-
+import Details from './components/Details';
 
 function App() {
 
   const [ data, setData] = useState([]);
-
 
   useEffect(() => {
     axios.get(`${BASE_URL}${API_CONNECTOR}${API_KEY}`)
@@ -28,11 +20,10 @@ function App() {
     })
   }, [])
 
-
-
   return (
     <div className="App">
       <Photo data={data}/>
+      <Details data={data}/>
     </div>
   );
 }

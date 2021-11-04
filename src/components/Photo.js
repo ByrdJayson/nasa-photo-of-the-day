@@ -1,23 +1,31 @@
 import React from 'react';
-import Details from '../components/Details';
-
+import styled from 'styled-components';
 
 export default function Photo(props){
 
     const { url } = props.data;
-    const { data } = props;
-    console.log(url);
+    const StyledPhoto = styled.div`
+    background-color: midnightblue;
+
+      img {
+        width: 50;
+        margin: 2rem;
+        border: 3px solid black;
+        filter: drop-shadow(0 0 2.5rem black);
+      }
+
+
+
+    `
 
 
     return (
       <>
-        <div className='img-container'>
+        <StyledPhoto>
 
-        <img src={url} alt='Nasa pic of the day' id='main-img' key={url}/>
+          <img src={url} alt='Nasa pic of the day' id='main-img' key={url}/>
 
-        </div>
-
-        <Details data={data}/>
+        </StyledPhoto>
       </>
 
     )
